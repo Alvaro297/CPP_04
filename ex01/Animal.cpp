@@ -10,6 +10,15 @@ Animal::~Animal()
 	std::cout << "Destroyed object animal" << std::endl;
 }
 
+Animal& Animal::operator=(const Animal& other)
+{
+	if (this != &other)
+	{
+		this->type = other.type;
+	}
+	return *this;
+}
+
 std::string Animal::getType() const { return (type);}
 
 void Animal::makeSound() const

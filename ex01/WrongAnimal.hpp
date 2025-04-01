@@ -1,9 +1,11 @@
 #include <iostream>
+# include "Brain.hpp"
 
 class WrongAnimal
 {
 protected:
 	std::string type;
+	Brain *brain;
 public:
 	WrongAnimal(std::string animalType = "Generic Animal");
 	virtual ~WrongAnimal();
