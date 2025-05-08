@@ -1,3 +1,6 @@
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
+
 # include "WrongAnimal.hpp"
 # include "Brain.hpp"
 
@@ -5,9 +8,11 @@ class WrongCat : public WrongAnimal
 {
 private:
 public:
-	WrongCat();
-	WrongCat(const WrongCat& other);
-	~WrongCat();
-	WrongCat& operator=(const WrongCat& other);
-	void makeSound() const override;
+    WrongCat();
+    WrongCat(const WrongCat& other);
+    ~WrongCat();
+    WrongCat& operator=(const WrongCat& other);
+    void makeSound() const override;
 };
+
+#endif
