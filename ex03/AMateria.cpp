@@ -10,5 +10,10 @@ AMateria::~AMateria()
 {
 	std::cout << "AMateria destructor called" << type << std::endl;
 }
-std::string AMateria::getType(){ return (type);}
+
+void AMateria::use(ICharacter& target)
+{
+	std::cout << "AMateria is used :)" << std::endl;
+}
+const std::string& AMateria::getType() const { return type; }
 

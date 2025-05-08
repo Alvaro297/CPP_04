@@ -11,6 +11,6 @@ public:
 	virtual ~AMateria();
 	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter& target);
-	std::string getType();
+	std::string const & getType() const;
 };
 
