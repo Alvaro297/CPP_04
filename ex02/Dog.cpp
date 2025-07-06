@@ -6,7 +6,7 @@ Dog::Dog() : Animal()
 	std::cout << "Dog constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog& other)
+Dog::Dog(const Dog& other) : Animal()
 {
 	brain = other.brain;
 }

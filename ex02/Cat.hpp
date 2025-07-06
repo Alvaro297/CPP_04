@@ -13,7 +13,7 @@ public:
     Cat(const Cat& other);
     Cat& operator=(const Cat& other);
     std::string getType() const;
-    void makeSound() const override;
+    void makeSound() const;
 };
 
 #endif

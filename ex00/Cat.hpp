@@ -10,7 +10,7 @@ public:
     Cat();
     ~Cat();
     std::string getType() const;
-    void makeSound() const override;
+    void makeSound() const;
 };
 
 #endif

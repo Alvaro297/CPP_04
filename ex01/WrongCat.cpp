@@ -7,7 +7,7 @@ WrongCat::WrongCat() : WrongAnimal()
 	std::cout << "WrongCat constructor called" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat& other)
+WrongCat::WrongCat(const WrongCat& other) : WrongAnimal()
 {
 	brain = new Brain(*other.brain);
 	std::cout << "Cat copy constructor called" << std::endl;
