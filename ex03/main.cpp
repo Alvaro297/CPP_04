@@ -1,5 +1,4 @@
 #include <iostream>
-#include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
 #include "AMateria.hpp"
 #include "Ice.hpp"
@@ -24,4 +23,5 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
+	return (0);
 }

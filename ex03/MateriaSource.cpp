@@ -3,7 +3,7 @@
 MateriaSource::~MateriaSource()
 {
 	std::cout << "Called destructor of MateriaSource" << std::endl;
-	for (size_t i = 1; i < 4; i++)
+	for (size_t i = 0; i < 4; i++)
 		if (materiaTemplates[i])
 			delete (materiaTemplates[i]);
 }
@@ -11,7 +11,8 @@ MateriaSource::~MateriaSource()
 MateriaSource::MateriaSource()
 {
 	for (size_t i = 0; i < 4; i++)
-		materiaTemplates[i] = nullptr;
+		materiaTemplates[i] = NULL;
+	std::cout << "MateriaSource constructor called" << std::endl;
 }
 
 void MateriaSource::learnMateria(AMateria* m)
@@ -30,6 +31,7 @@ void MateriaSource::learnMateria(AMateria* m)
 			return ;
 		}
 	}
+	delete (m);
 	std::cout << "Materia cant be learned bcs I dont have space" << std::endl;
 }
 
@@ -40,5 +42,5 @@ AMateria* MateriaSource::createMateria(std::string const& type)
 		if (materiaTemplates[i] && materiaTemplates[i]->getType() == type)
 			return (materiaTemplates[i]->clone());
 	}
-	return (nullptr);
+	return (NULL);
 }

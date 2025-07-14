@@ -13,6 +13,7 @@ AMateria::~AMateria()
 
 void AMateria::use(ICharacter& target)
 {
+	(void)target;
 	std::cout << "AMateria is used :)" << std::endl;
 }
 const std::string& AMateria::getType() const { return type; }

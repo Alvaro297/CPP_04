@@ -3,7 +3,7 @@
 Character::Character(std::string name) : name(name)
 {
 	for (size_t i = 0; i < 4; i++)
-		spells[i] = nullptr;
+		spells[i] = NULL;
 }
 
 Character::~Character()
@@ -13,6 +13,8 @@ Character::~Character()
 		if (spells[i])
 			delete spells[i];
 }
+
+std::string const & Character::getName() const { return name;}
 
 void Character::equip(AMateria* m)
 {
@@ -43,7 +45,7 @@ void Character::unequip(int ptr)
 		if (spells[ptr])
 		{
 			std::cout << "Unequipped materia from slot " << ptr << "." << std::endl;
-			spells[ptr] = nullptr;
+			spells[ptr] = NULL;
 		}
 		else
 			std::cout << "Error: Slot " << ptr << " is already empty." << std::endl;
