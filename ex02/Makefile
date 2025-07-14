@@ -6,7 +6,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS =	main.cpp \
 		Dog.cpp \
 		Cat.cpp \
-		Animal.cpp \
+		AAnimal.cpp \
 		WrongAnimal.cpp \
 		WrongCat.cpp \
 		Brain.cpp \
