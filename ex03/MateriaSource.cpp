@@ -8,6 +8,41 @@ MateriaSource::~MateriaSource()
 			delete (materiaTemplates[i]);
 }
 
+MateriaSource& MateriaSource::operator=(const MateriaSource &other)
+{
+	if (this != &other)
+	{
+		for (size_t i = 0; i < 4; i++)
+		{
+			if (materiaTemplates[i])
+			{
+				delete materiaTemplates[i];
+				materiaTemplates[i] = NULL;
+			}
+		}
+		for (size_t i = 0; i < 4; i++)
+		{
+			if (other.materiaTemplates[i])
+				materiaTemplates[i] = other.materiaTemplates[i]->clone();
+			else
+				materiaTemplates[i] = NULL;
+		}
+	}
+	return *this;
+}
+
+MateriaSource::MateriaSource(const MateriaSource& other)
+{
+    for (size_t i = 0; i < 4; i++)
+    {
+        if (other.materiaTemplates[i])
+            materiaTemplates[i] = other.materiaTemplates[i]->clone();
+        else
+            materiaTemplates[i] = NULL;
+    }
+    std::cout << "MateriaSource copy constructor called" << std::endl;
+}
+
 MateriaSource::MateriaSource()
 {
 	for (size_t i = 0; i < 4; i++)

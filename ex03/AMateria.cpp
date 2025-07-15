@@ -6,6 +6,21 @@ AMateria::AMateria(std::string type)
 	this->type = type;
 }
 
+AMateria::AMateria(const AMateria &other)
+{
+	std::cout << "AMateria constructor called: " << type << std::endl;
+	this->type = other.type;
+}
+
+AMateria& AMateria::operator=(const AMateria& other)
+{
+	if (this != &other)
+	{
+		this->type = other.type;
+	}
+	return *this;
+}
+
 AMateria::~AMateria()
 {
 	std::cout << "AMateria destructor called" << type << std::endl;

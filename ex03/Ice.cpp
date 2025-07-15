@@ -1,7 +1,22 @@
 # include "Ice.hpp"
 
-Ice::Ice() : AMateria("ice") {
+Ice::Ice() : AMateria("ice")
+{
 	std::cout << "Ice constructor called" << std::endl;
+}
+
+Ice::Ice(const Ice& other) : AMateria(other)
+{
+	std::cout << "Ice constructor called" << std::endl;
+}
+
+Ice& Ice::operator=(const Ice &other)
+{
+	if (this != &other)
+	{
+		AMateria::operator=(other); // Llama al operador de la clase base
+	}
+	return *this;
 }
 
 Ice::~Ice()

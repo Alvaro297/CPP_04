@@ -4,6 +4,20 @@ Cure::Cure() : AMateria("Cure") {
 	std::cout << "Cure constructor called" << std::endl;
 }
 
+Cure::Cure(const Cure& other) : AMateria(other)
+{
+	std::cout << "Ice constructor called" << std::endl;
+}
+
+Cure& Cure::operator=(const Cure &other)
+{
+	if (this != &other)
+	{
+		AMateria::operator=(other); // Llama al operador de la clase base
+	}
+	return *this;
+}
+
 Cure::~Cure()
 {
 	std::cout << "Cure destructor called" << std::endl;

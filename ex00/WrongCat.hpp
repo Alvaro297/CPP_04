@@ -7,10 +7,10 @@ class WrongCat : public WrongAnimal
 {
 private:
 public:
-    WrongCat();
-    ~WrongCat();
-    WrongCat& operator=(const WrongCat& other);
-    void makeSound() const;
+	WrongCat();
+	~WrongCat();
+	WrongCat& operator=(const WrongCat& other);
+	void makeSound() const;
 };
 
 #endif
