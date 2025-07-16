@@ -8,18 +8,17 @@ Cat::Cat() : Animal()
 
 Cat::Cat(const Cat& other) : Animal(other)
 {
-    std::cout << "Cat copy constructor called" << std::endl;
+	std::cout << "Cat copy constructor called" << std::endl;
 }
 
-// Operador de asignación
 Cat& Cat::operator=(const Cat& other)
 {
-    if (this != &other)
-    {
-        Animal::operator=(other); // Llama al operador de la clase base
-    }
-    std::cout << "Cat assignment operator called" << std::endl;
-    return *this;
+	if (this != &other)
+	{
+		Animal::operator=(other);
+	}
+	std::cout << "Cat assignment operator called" << std::endl;
+	return *this;
 }
 
 Cat::~Cat()
